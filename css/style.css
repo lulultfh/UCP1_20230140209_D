@@ -6,8 +6,126 @@ html{
     scroll-behavior: smooth;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+
 body{
     background: #EEF1DA;
     background: linear-gradient(0deg, rgba(238, 241, 218, 1) 0%, rgba(210, 102, 90, 1) 50%, rgba(184, 33, 50, 1) 100%);
     background-attachment: fixed;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: Inter;
+}
+
+#navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(246, 222, 216, 0.5);
+  padding: 10px 30px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  overflow: visible;
+  box-sizing: border-box;
+  height: 85px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#navbar.hidden {
+  background-color: rgba(148, 180, 193, 0); /* Navbar menjadi transparan saat scroll ke bawah */
+}
+
+.logo a{
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.logo-img{
+  width: 80px;
+  height: auto;
+}
+
+.nav-links{
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  justify-content: flex-start;
+}
+
+.nav-links a{
+  text-decoration: none;
+  color: #F6DED8;
+  font-family: Inter;
+  /* font-weight: 500; */
+  font-size: 15px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-links a:hover{
+  color: #F2B28C;
+}
+
+section{
+  padding: 100px 20px;
+}
+
+#home {
+    padding-top: 130px; /* biar nggak ketutup navbar */
+    padding-bottom: 100px;
+}
+
+h1{
+  font-weight: bold;
+  font-size: 50px;
+  color: #ECEFCA;
+}
+
+p{
+  padding-left: 16px;
+  padding-right: 16px;
+  text-align: center; 
+  max-width: 800px;  
+  margin: 0 auto; 
+  font-size: 20px;
+  color: #ECEFCA;
+}
+
+.animasi-awal {
+  font-size: 3rem;
+  font: bold;
+  width: fit-content;
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid rgba(255, 255, 255, 0.75);
+  animation: typing-loop 6s steps(16) infinite, blink 0.75s step-end infinite;
+}
+
+.animasi-awal span {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@keyframes typing-loop {
+  0%   { width: 0 }
+  40%  { width: 17ch }
+  60%  { width: 17ch }
+  100% { width: 0 }
+} 
+
+@keyframes blink {
+  50% { border-color: transparent; }
 }
