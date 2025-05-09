@@ -5,3 +5,9 @@ head {
 html{
     scroll-behavior: smooth;
 }
+
+body{
+    background: #EEF1DA;
+    background: linear-gradient(0deg, rgba(238, 241, 218, 1) 0%, rgba(210, 102, 90, 1) 50%, rgba(184, 33, 50, 1) 100%);
+    background-attachment: fixed;
+}
