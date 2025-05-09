@@ -25,7 +25,7 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(246, 222, 216, 0.5);
+  background-color: rgba(246, 222, 216, 0.3);
   padding: 10px 30px;
   position: fixed;
   top: 0;
@@ -38,7 +38,7 @@ body{
 }
 
 #navbar.hidden {
-  background-color: rgba(148, 180, 193, 0); /* Navbar menjadi transparan saat scroll ke bawah */
+  background-color: rgba(148, 180, 193, 0);
 }
 
 .logo a{
