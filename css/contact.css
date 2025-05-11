@@ -1,0 +1,226 @@
+head {
+    font-family: Inter;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+body{
+    background: #EEF1DA;
+    background: linear-gradient(0deg, rgba(238, 241, 218, 1) 0%, rgba(210, 102, 90, 1) 50%, rgba(184, 33, 50, 1) 100%);
+    background-attachment: fixed;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: Inter;
+}
+
+#navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(246, 222, 216, 0.3);
+  padding: 10px 30px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  overflow: visible;
+  box-sizing: border-box;
+  height: 85px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#navbar.hidden {
+  background-color: rgba(148, 180, 193, 0);
+}
+
+.logo a{
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.logo-img{
+  width: 80px;
+  height: auto;
+}
+
+.nav-links{
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  justify-content: flex-start;
+}
+
+.nav-links a{
+  text-decoration: none;
+  color: #F6DED8;
+  font-family: Inter;
+  /* font-weight: 500; */
+  font-size: 15px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-links a:hover{
+  color: #B82132;
+}
+
+h1{
+  font-weight: bold;
+  font-size: 50px;
+  color: #ECEFCA;
+}
+
+.animasi-awal {
+  font-size: 3rem;
+  font: bold;
+  width: fit-content;
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid rgba(255, 255, 255, 0.75);
+  animation: typing-loop 6s steps(16) infinite, blink 0.75s step-end infinite;
+}
+
+.animasi-awal span {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@keyframes typing-loop {
+  0%   { width: 0 }
+  40%  { width: 12ch }
+  60%  { width: 12ch }
+  100% { width: 0 }
+} 
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+#awal {
+    padding-top: 120px;
+    padding-bottom: 50px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.animasi-awal {
+    font-size: 2.5rem;
+    color: #ECEFCA;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Form Styles */
+#registrationForm {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#registrationForm div {
+    margin-bottom: 20px;
+}
+
+#registrationForm label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #B82132;
+}
+
+#registrationForm input,
+#registrationForm select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+#registrationForm input:focus,
+#registrationForm select:focus {
+    border-color: #B82132;
+    outline: none;
+}
+
+#registrationForm button {
+    background-color: #B82132;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    font-weight: bold;
+}
+
+#registrationForm button:hover {
+    background-color: #8a1a2b;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 999;
+    display: none;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #F6DED8;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    z-index: 1000;
+    max-width: 400px;
+    text-align: center;
+    display: none;
+}
+
+.popup h2 {
+    color: #B82132;
+    margin-bottom: 15px;
+}
+
+.popup p {
+    margin-bottom: 20px;
+}
+
+.popup button {
+    background-color: #B82132;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}

@@ -5,8 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BerryLearn-Contact</title>
     <link rel="icon" type="icon" href="assets/BerryLearn_Logo_Fix.png"/>
+    <link rel="stylesheet" href="css/contact.css">
+    <script src="js/script.js"></script>
 </head>
 <body>
-    
+    <nav id="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/BerryLearn_Logo_Fix.png" alt="Logo" class="logo-img">
+            </a>
+        </div>
+        <div class="nav-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="features.html">Fitur</a></li>
+            <li><a href="contact.html">Kontak</a></li>
+        </div>
+    </nav>
+
+    <section id="awal">
+        <h1 class="animasi-awal">Daftar Sekarang</h1>
+
+        <form id="registrationForm">
+            <div>
+                <label for="nama">Nama Lengkap:</label>
+                <input type="text" id="nama" name="nama" required>
+            </div>
+            
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div>
+                <label for="minat">Minat Belajar:</label>
+                <select id="minat" name="minat" required>
+                    <option value="">Pilih minat belajar</option>
+                    <option value="IPA">IPA</option>
+                    <option value="IPS">IPS</option>
+                </select>
+            </div>
+            
+            <button type="submit">Daftar Sekarang</button>
+        </form>
+    </section>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="popup" id="popup">
+        <h2>🎉 Promo Spesial! 🎉</h2>
+        <p>Dapatkan <strong>DISKON 50%</strong> untuk pendaftaran sebelum masuk sekolah!</p>
+        <p>Berlaku hingga 30 Mei 2025</p>
+        <button onclick="closePopup()">Mengerti</button>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
