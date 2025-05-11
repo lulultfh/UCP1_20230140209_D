@@ -5,8 +5,259 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BerryLearn-Features</title>
     <link rel="icon" type="icon" href="assets/BerryLearn_Logo_Fix.png"/>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #EEF1DA;
+            background: linear-gradient(0deg, rgba(238, 241, 218, 1) 0%, rgba(210, 102, 90, 1) 50%, rgba(184, 33, 50, 1) 100%);
+            background-attachment: fixed;
+            font-family: Inter;
+            color: #333;
+        }
+
+        #navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(246, 222, 216, 0.3); /* More visible color */
+            padding: 10px 30px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            height: 85px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            transition: background-color 0.3s ease-in-out;
+            overflow: visible;
+        }
+        
+        #navbar.hidden {
+            background-color: rgba(148, 180, 193, 0);
+        }
+
+        .logo a {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-img {
+            width: 80px;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-img:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-links{
+            list-style: none;
+            display: flex;
+            gap: 40px;
+            justify-content: flex-start;
+        }
+
+        .nav-links a{
+            text-decoration: none;
+            color: #D2665A;
+            font-family: Inter;
+            /* font-weight: 500; */
+            font-size: 15px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+            white-space: nowrap;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+
+        .nav-links a:hover {
+            color: #B82132;
+        }
+
+        /* Features Section */
+        #fitur {
+            padding: 150px 30px 80px; /* More top padding for navbar */
+            background-color: #F6DED8;
+            text-align: center;
+        }
+
+        #fitur h1 {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #B82132;
+        }
+
+        .fitur-img {
+            max-width: 80%;
+            height: auto;
+            margin: 0 auto 40px;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            display: block;
+        }
+
+        .list-fitur {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .fitur1, .fitur2, .fitur3, .fitur4 {
+            background: #fff;
+            padding: 25px 30px;
+            width: 80%;
+            max-width: 700px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .fitur1 h3, .fitur2 h3, .fitur3 h3, .fitur4 h3 {
+            margin-bottom: 15px;
+            color: #B82132;
+            font-size: 1.5rem;
+        }
+
+        .fitur1 p, .fitur2 p, .fitur3 p, .fitur4 p {
+            color: #333;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .fitur-video {
+            width: 80%;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .fitur-video h3 {
+            margin-bottom: 25px;
+            color: #B82132;
+            font-size: 1.5rem;
+        }
+
+        .fitur-video iframe {
+            width: 100%;
+            height: 400px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border: none;
+        }
+
+        /* Typing Animation */
+        .animasi-awal {
+            font-size: 3rem;
+            font-weight: bold;
+            width: fit-content;
+            margin: 0 auto;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 3px solid rgba(255, 255, 255, 0.75);
+            animation: typing-loop 6s steps(16) infinite, blink 0.75s step-end infinite;
+        }
+
+        @keyframes typing-loop {
+            0% { width: 0 }
+            40% { width: 13ch }
+            60% { width: 13ch }
+            100% { width: 0 }
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            #navbar {
+                padding: 10px 15px;
+                height: 70px;
+            }
+            
+            .logo-img {
+                width: 60px;
+            }
+            
+            .nav-links {
+                gap: 15px;
+            }
+            
+            .nav-links a {
+                font-size: 16px;
+                padding: 6px 8px;
+            }
+            
+            #fitur {
+                padding: 120px 20px 60px;
+            }
+            
+            .fitur1, .fitur2, .fitur3, .fitur4, .fitur-video {
+                width: 95%;
+                padding: 20px;
+            }
+            
+            .fitur-video iframe {
+                height: 250px;
+            }
+        }
+    </style>
 </head>
 <body>
+    <nav id="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/BerryLearn_Logo_Fix.png" alt="BerryLearn Logo" class="logo-img">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="features.html">Fitur</a></li>
+            <li><a href="contact.html">Kontak</a></li>
+        </ul>
+    </nav>
     
+    <section id="fitur">
+        <h1 class="animasi-awal"><span>Fitur Unggulan BerryLearn</span></h1>
+        <img src="assets/BerryLearn.png" alt="Prototype BerryLearn" class="fitur-img">
+        
+        <div class="list-fitur">
+            <div class="fitur1">
+                <h3>Materi dan Latihan</h3>
+                <p>Pembahasan lengkap serta latihan soal untuk membantu memperdalam pemahaman</p>
+            </div>
+            <div class="fitur2">
+                <h3>Ranking Mingguan</h3>
+                <p>Naik ke puncak papan peringkat dan lihat sejauh mana kamu berkembang.</p>
+            </div>
+            <div class="fitur3">
+                <h3>Total Poin</h3>
+                <p>Setiap proses berharga, kumpulkan poinmu sekarang</p>
+            </div>
+            <div class="fitur4">
+                <h3>Streak Belajar</h3>
+                <p>Jaga apimu tetap menyala!</p>
+            </div>
+            <div class="fitur-video">
+                <h3>Cuplikan Materi Video</h3>
+                <iframe src="https://www.youtube.com/embed/ZAqIoDhornk?si=ql-BIRnp8rzTal-I" 
+                title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; 
+                encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
